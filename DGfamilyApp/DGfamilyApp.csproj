@@ -239,6 +239,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705302253251_startingDatabase.cs" />
+    <Compile Include="Migrations\201705302253251_startingDatabase.Designer.cs">
+      <DependentUpon>201705302253251_startingDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Family.cs" />
@@ -251,12 +256,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\FamilyDetail\FamilyDetail.html" />
+    <Content Include="app\FamilyDetail\FamilyDetailController.js" />
+    <Content Include="app\FamilyForm\FamilyForm.html" />
+    <Content Include="app\FamilyForm\FamilyFormController.js" />
     <Content Include="app\Home\Home.html" />
     <Content Include="app\Home\HomeController.js" />
     <Content Include="app\Login\Login.html" />
     <Content Include="app\Login\LoginController.js" />
     <Content Include="app\Logout\Logout.html" />
     <Content Include="app\Logout\LogoutController.js" />
+    <Content Include="app\MemberDetail\MemberDetail.html" />
+    <Content Include="app\MemberDetail\MemberDetailController.js" />
+    <Content Include="app\MemberForm\MemberForm.html" />
+    <Content Include="app\MemberForm\MemberFormController.js" />
     <Content Include="app\Register\Register.html" />
     <Content Include="app\Register\RegisterController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -337,6 +350,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705302253251_startingDatabase.resx">
+      <DependentUpon>201705302253251_startingDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
