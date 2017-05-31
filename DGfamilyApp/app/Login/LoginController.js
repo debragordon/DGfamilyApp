@@ -1,4 +1,4 @@
-﻿app.controller("LoginController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
+﻿app.controller("LoginController", ["$scope", "$http", "$window", function ($scope, $http, $window) {
         console.log("Login controller connected");
         $scope.username = "";
         $scope.password = "";
@@ -15,14 +15,14 @@
                     },
                     data: { grant_type: "password", username: $scope.username, password: $scope.password }
                 })
-                .then(function () {
+                .then(function (result) {
                     console.log("result", result);
 
-                    sessiontStorage.setItem('token', result.data.access_token);
+                    sessionStorage.setItem('token', result.data.access_token);
 
                     $http.defaults.headers.common['Authorization'] = `bearer ${result.data.access_token}`;
 
-                    $location.path("/home");
+                    $window.location.assign("/home");
                 });
         }
     }
