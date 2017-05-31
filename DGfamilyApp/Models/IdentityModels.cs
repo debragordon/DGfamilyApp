@@ -23,6 +23,7 @@ namespace DGfamilyApp.Models
         public ApplicationDbContext()
             : base("FamilyApp", throwIfV1Schema: false)
         {
+            //dbsets here
         }
         
         public static ApplicationDbContext Create()

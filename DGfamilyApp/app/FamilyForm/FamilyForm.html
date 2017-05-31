@@ -1,5 +1,17 @@
 ﻿<div>Family Form</div>
 
 <div class="container">
-    <div>Family Form (Add/Edit) Here</div>
+    <div class="form-group row">
+        <label for="family-name" class="col-2 col-form-label">Family Name</label>
+        <div class="col-10">
+            <input class="form-control" type="text" placholder="Smith" id="family-name" ng-model="family.Lastname">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="family-origin" class="col-2 col-form-label">Origin</label>
+        <div class="col-10">
+            <input class="form-control" type="text" placeholder="Germany" id="family-origin" ng-model="family.Origin">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="updateFamily(family)">Add/Update Family</button>
 </div>
