@@ -270,6 +270,7 @@
     <Content Include="app\MemberDetail\MemberDetailController.js" />
     <Content Include="app\MemberForm\MemberForm.html" />
     <Content Include="app\MemberForm\MemberFormController.js" />
+    <Content Include="app\NavController.js" />
     <Content Include="app\Register\Register.html" />
     <Content Include="app\Register\RegisterController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
