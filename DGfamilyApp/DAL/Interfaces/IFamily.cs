@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FamilyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace DGfamilyApp.DAL.Interfaces
 {
-    interface IFamily
+    public interface IFamily
     {
+        void AddNewFamily(Family familyNew);
+        int EditFamily(Family familyEdit);
+        Family GetSingleFamily(int id);
+        IEnumerable<Family> GetAllFamilies();
+        void DeleteSingleFamily(int id);
     }
 }

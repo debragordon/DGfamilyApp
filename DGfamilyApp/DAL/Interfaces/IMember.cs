@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FamilyApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace DGfamilyApp.DAL.Interfaces
 {
     interface IMember
     {
+        void AddNewMember(Member memberNew);
+        int EditMember(Member memberEdit);
+        Member GetSingleMember(int id);
+        IEnumerable<Member> GetAllMembers();
+        void DeleteSingleMember(int id);
     }
 }
