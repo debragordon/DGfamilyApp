@@ -10,7 +10,7 @@ namespace DGfamilyApp.DAL.Interfaces
     public interface IFamily
     {
         void AddNewFamily(Family familyNew);
-        int EditFamily(Family familyEdit);
+        void EditFamily(Family familyEdit);
         Family GetSingleFamily(int id);
         IEnumerable<Family> GetAllFamilies();
         void DeleteSingleFamily(int id);

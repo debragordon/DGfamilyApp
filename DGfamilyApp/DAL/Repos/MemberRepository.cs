@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using DGfamilyApp.DAL.Interfaces;
 using FamilyApp.Models;
+using System.Data.Entity.Migrations;
 
 namespace DGfamilyApp.DAL.Repos
 {
@@ -18,27 +19,30 @@ namespace DGfamilyApp.DAL.Repos
 
         public void AddNewMember(Member memberNew)
         {
-            throw new NotImplementedException();
+            _context.Members.Add(memberNew);
+            _context.SaveChanges();
         }
 
         public void DeleteSingleMember(int id)
         {
-            throw new NotImplementedException();
+            var deleteThis = _context.Members.Find(id);
+            _context.Members.Remove(deleteThis);
         }
 
-        public int EditMember(Member memberEdit)
+        public void EditMember(Member memberEdit)
         {
-            throw new NotImplementedException();
+            _context.Members.AddOrUpdate(memberEdit);
+            _context.SaveChanges();
         }
 
         public IEnumerable<Member> GetAllMembers()
         {
-            throw new NotImplementedException();
+            return _context.Members;
         }
 
         public Member GetSingleMember(int id)
         {
-            throw new NotImplementedException();
+            return _context.Members.Find(id);
         }
     }
 }

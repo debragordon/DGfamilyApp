@@ -10,7 +10,7 @@ namespace DGfamilyApp.DAL.Interfaces
     interface IMember
     {
         void AddNewMember(Member memberNew);
-        int EditMember(Member memberEdit);
+        void EditMember(Member memberEdit);
         Member GetSingleMember(int id);
         IEnumerable<Member> GetAllMembers();
         void DeleteSingleMember(int id);

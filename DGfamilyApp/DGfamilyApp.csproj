@@ -241,6 +241,7 @@
     <Compile Include="Controllers\FamilyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DAL\AppContext.cs" />
     <Compile Include="DAL\Interfaces\IFamily.cs" />
     <Compile Include="DAL\Interfaces\IMember.cs" />
     <Compile Include="DAL\Repos\FamilyRepository.cs" />

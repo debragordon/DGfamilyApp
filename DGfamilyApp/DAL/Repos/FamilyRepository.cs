@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using DGfamilyApp.DAL.Interfaces;
@@ -26,12 +27,14 @@ namespace DGfamilyApp.DAL.Repos
 
         public void DeleteSingleFamily(int id)
         {
-            throw new NotImplementedException();
+            var deleteThis = _context.Families.Find(id);
+            _context.Families.Remove(deleteThis);
         }
 
-        public int EditFamily(Family familyEdit)
+        public void EditFamily(Family familyEdit)
         {
-            throw new NotImplementedException();
+            _context.Families.AddOrUpdate(familyEdit);
+            _context.SaveChanges();
         }
 
         public IEnumerable<Family> GetAllFamilies()
